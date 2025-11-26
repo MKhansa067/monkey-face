@@ -83,7 +83,7 @@ img_neutral = cv2.imread("images/monke1.jpeg")    # neutral
 img_allstraight = cv2.imread("images/hitler5.jpg")  # semua jari lurus + neutral
 ```
 
-### 4. Fungsi menghitung jarak landmark
+### 4. Fungsi menghitung jarak Landmark
 Fungsi ini penting untuk:
 - Menentukan apakah mulut terbuka / tersenyum
 - Mengecek mata tertutup
@@ -93,7 +93,7 @@ def distance(p1, p2):
     return np.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2)
 ```
 
-### 5. Fungsi utama deteksi
+### 5. Fungsi utama Pendeteksi
 Bagian ini adalah pusat logika program.  
 **Deteksi Wajah:**  
 - Mouth Gap → cek mulut terbuka → ekspresi “surprised”
@@ -372,4 +372,5 @@ python monke_detect.py
 - Putar gesture tangan sesuai ekspresi
 - Tekan ESC untuk keluar
 
+[Balik ke halaman awal](#i-instalasi)
 # Selesai!
