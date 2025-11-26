@@ -1,5 +1,23 @@
-# monkey-face
-## I. Cara download program ini  
+# Monkey Face-Detection (Meme)
+## Daftar Isi
+- [I. Instalasi](#i-instalasi)
+- [II. Tools yang dibutuhkan](#ii-tools-yang-dibutuhkan)
+  - [1. Perangkat Lunak](#1-perangkat-lunak)
+  - [2. Library Python](#2-library-python-install-via-terminal-vscode)
+- [III. Pembuatan program per bagian](#iii-pembuatan-program-per-bagian)
+  - [1. Fungsi Library](#1-fungsi-library)
+  - [2. Inisialisasi Mediapipe](#2-inisialisasi-mediapipe)
+  - [3. Load Gambar Monke](#3-load-gambar-monke)
+  - [4. Fungsi menghitung jarak landmark](#4-fungsi-menghitung-jarak-landmark)
+  - [5. Fungsi utama deteksi](#5-fungsi-utama-deteksi)
+  - [6. Membuka Kamera](#6-membuka-kamera)
+  - [7. Proses Frame by Frame](#7-proses-frame-by-frame)
+  - [8. Menentukan Gambar sesuai Ekspresi](#8-menentukan-gambar-sesuai-ekspresi)
+  - [9. Menampilkan Output](#9-menampilkan-output)
+  - [10. Keluar Program](#10-keluar-program)
+- [IV. Cara menjalankan program](#iv-cara-menjalankan-program-jika-sudah-di-download)
+
+## I. Instalasi  
 - Klik tombol **Code** yang berwarna hijau.
 - Klik **Download ZIP**, setelah itu ekstrak pada folder lokal anda.  
 <div align="center"><img width="553" height="436" alt="image" src="https://github.com/user-attachments/assets/33992be0-cc97-476b-a6a3-e90e6d60df9c" /></div>
