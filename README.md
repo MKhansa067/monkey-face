@@ -8,6 +8,7 @@
 ### Perangkat Lunak  
 - VSCode (text editor)
 - Python versi 3.13.0 (recommended)
+
 ### Library Python (install via terminal VSCode)
 - pip install opencv-python
 - pip install mediapipe
@@ -22,11 +23,14 @@ pip install opencv-python mediapipe numpy
 - cv2(opencv): Untuk memproses video dari kamera, membaca gambar monyet, menggambar landmark tangan, dan menampilkan jendela output visual.
 - mediapipe: Memproses data video untuk mendeteksi objek, gerakan tubuh, wajah, tangan, dan titik-titik kunci lainnya.
 - numpy: operasi matematika (penjumlahan, pengurangan, perkalian), analisis data (statistik, aljabar linear), dan manipulasi array seperti mengubah bentuk (reshape) atau menggabungkannya (concatenate).
+
+Pada kode seperti ini:
 ```python
 import cv2
 import mediapipe as mp
 import numpy as np
 ```
+
 ### Inisialisasi Mediapipe
 Program ini menggunakan:
 - mp.solutions.hands → mendeteksi posisi jari tangan
@@ -39,18 +43,13 @@ mp_face = mp.solutions.face_mesh
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 ```
+
 ### Load Gambar Monke
 Semua gambar disiapkan untuk ditampilkan sesuai ekspresi:
 - Menghadap kebelakang
 - Jari tengah
 - Kedua mata tertutup
-- Mata samping terbuka + terkejut
-- Satu mata tertutup
-- Terkejut
-- Punya ide
-- Berpikir
-- Netral
-- Pose h*tler
+- dst.    
 ```python
 img_turn_back = cv2.imread("images/monke9.jpeg")  # monke to the back
 img_fuck_gorilla = cv2.imread("images/monke8.jpeg") # gorilla fuck emote
@@ -63,3 +62,57 @@ img_think = cv2.imread("images/monke2.jpeg")      # think
 img_neutral = cv2.imread("images/monke1.jpeg")    # neutral
 img_allstraight = cv2.imread("images/hitler5.jpg")  # semua jari lurus + neutral
 ```
+
+### Fungsi menghitung jarak landmark
+Fungsi ini penting untuk:
+- Menentukan apakah mulut terbuka / tersenyum
+- Mengecek mata tertutup
+- Mengevaluasi apakah jari “lurus” atau “melengkung”  
+
+Pada kode seperti dan menyerupai ini:
+```python
+def distance(p1, p2):
+    return np.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2)
+```
+
+### Fungsi utama deteksi
+Bagian ini adalah pusat logika program.  
+**Deteksi Wajah:**  
+- Mouth Gap → cek mulut terbuka → ekspresi “surprised”
+- Mouth Ratio → cek tersenyum → ekspresi “smile”
+- Eye Distance → mendeteksi mata tertutup
+- One-eyed / eye-closed
+- Dst.  
+**Deteksi Gesture Tangan:**  
+- Fungsi is_straight() → cek jari lurus
+- Fungsi is_half_clenched() → cek tangan menggenggam setengah
+- Dst.  
+**Alur final:**  
+- Jika wajah terdeteksi → analisis ekspresi
+- Jika tangan terdeteksi → analisis gesture
+- Jika keduanya hilang → tampilkan "turn back"
+
+Pada kode seperti dan menyerupai ini:  
+```python
+def detect_expression(hand_result, face_result):
+```
+
+### Membuka Kamera
+Mengaktifkan webcam default.
+```
+cap = cv2.VideoCapture(0)
+```
+### Proses Frame by Frame
+
+### Menentukan Gambar sesuai Ekspresi
+
+### Menampilkan Output
+
+### Keluar Program
+
+## Cara menjalankan program
+- Buka folder di VSCode
+- Buka terminal
+- Jalankan
+```terminal
+python 
