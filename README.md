@@ -34,7 +34,9 @@
 ```terminal
 pip install opencv-python mediapipe numpy
 ```
-<div align="center"><img width="562" height="21" alt="image" src="https://github.com/user-attachments/assets/a077e85a-4f4c-4d45-b0f1-ebc4e4d2c223" /></div>
+<div align="center"><img width="562" height="21" alt="image" src="https://github.com/user-attachments/assets/a077e85a-4f4c-4d45-b0f1-ebc4e4d2c223" /></div>  
+
+**Note: Ketika ketentuan pada halaman I dan II sudah semua, jika ingin langsung menjalankan program, langsung saja loncat ke halaman [IV](#iv-cara-menjalankan-program-jika-sudah-di-download).**  
 
 ## III. Pembuatan program per bagian
 ### 1. Fungsi Library  
